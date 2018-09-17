@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "sdkVersion": "29.0.0",
+    "splash": {
+      "backgroundColor": "#00ff00",
+      "resizeMode": "cover"
+    }
+  }
+}
