@@ -6,8 +6,9 @@ import store from './store'
 import getTheme from './theme/native-base-theme/components'
 import material from './theme/native-base-theme/variables/material'
 
-import { SplashScreen } from './components'
-import AppNavigation from './navigation/app-navigation'
+import { SplashScreen } from '@components'
+import AppNavigation from './navigation/app/app-navigation'
+import RootNavigation from './navigation/root-navigation'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export default class App extends React.Component {
       <StyleProvider style={getTheme(material)}>
         <Provider store={store}>
           {this.state.isReady ? (
-            <AppNavigation />
+            <RootNavigation />
           ) : (
             <SplashScreen onFinish={() => this.setState({ isReady: true })} />
           )}
