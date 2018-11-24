@@ -23,9 +23,7 @@ const _cacheResourcesAsync = async () => {
     // require('../../assets/img/falcon.jpg')
   ])
 
-  const fontAssets = cacheFonts([
-    { Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf') }
-  ])
+  const fontAssets = cacheFonts([])
 
   await Promise.all([...imageAssets, ...fontAssets])
 }
@@ -39,6 +37,6 @@ function* fetchAllData() {
   }
 }
 
-export default function* mySaga3() {
+export default function* splashScreenSaga() {
   yield takeLatest(PRELOAD_ASSETS_REQUESTED, fetchAllData)
 }

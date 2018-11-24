@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { AppLoading } from 'expo'
 import PropTypes from 'prop-types'
-import { View } from 'react-native'
-import { Text } from 'native-base'
+import { View, Text } from 'react-native'
 import { preloadAssetsRequested } from './actions'
 
 class SplashScreen extends Component {
@@ -24,17 +23,17 @@ class SplashScreen extends Component {
 }
 
 const mapStateToProps = state => ({
-  preloadState: state.preload.preloadState
+  preloadState: state.preload.preloadState,
 })
 
 const mapDispatchToProps = dispatch => ({
-  preloadAssets: () => dispatch(preloadAssetsRequested())
+  preloadAssets: () => dispatch(preloadAssetsRequested()),
 })
 
 SplashScreen.propTypes = {
   preloadState: PropTypes.object.isRequired,
   onFinish: PropTypes.func.isRequired,
-  preloadAssets: PropTypes.func.isRequired
+  preloadAssets: PropTypes.func.isRequired,
 }
 
 export default connect(
