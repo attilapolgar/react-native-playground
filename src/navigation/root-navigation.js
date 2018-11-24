@@ -5,9 +5,9 @@ import AuthStack from './auth/auth-navigation'
 export default createSwitchNavigator(
   {
     App: AppStack,
-    Auth: AuthStack
+    Auth: AuthStack,
   },
   {
-    initialRouteName: 'App'
+    initialRouteName: 'App',
   }
 )

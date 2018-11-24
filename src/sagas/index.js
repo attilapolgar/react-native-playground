@@ -5,5 +5,9 @@ import counter from './counter'
 import preload from '@components/splash-screen/saga'
 
 export default function* rootSaga() {
-  yield all([counter(), preload()])
+  try {
+    yield all([counter(), preload()])
+  } catch (error) {
+    console.error(error)
+  }
 }

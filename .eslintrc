@@ -1,19 +1,49 @@
 {
-  "plugins": ["react", "react-native"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react-redux/recommended",
+    "plugin:redux-saga/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "plugins": ["react", "react-native", "react-redux", "redux-saga", "sonarjs"],
   "parser": "babel-eslint",
   "env": {
     "react-native/react-native": true
   },
   "rules": {
+    "react/prop-types": 2,
     "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
     "react-native/no-inline-styles": 2,
-    "react-native/no-color-literals": 2
+    "react-native/no-color-literals": 2,
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ],
+    "no-console": "off",
+    "no-useless-escape": "warn"
   },
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
       "modules": true
     }
+  },
+  "settings": {
+    "react": {
+      "version": "16.3.1"
+    }
+  },
+  "globals": {
+    "it": false,
+    "expect": false,
+    "test": false,
+    "describe": false
   }
 }

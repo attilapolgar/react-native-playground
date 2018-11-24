@@ -5,5 +5,5 @@ import preload from '@components/splash-screen/reducer'
 
 export default combineReducers({
   counter,
-  preload
+  preload,
 })
