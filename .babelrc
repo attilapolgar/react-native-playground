@@ -5,5 +5,5 @@
       "plugins": ["@babel/transform-react-jsx-source"]
     }
   },
-  "plugins": ["@babel/plugin-transform-runtime"]
+  "plugins": []
 }

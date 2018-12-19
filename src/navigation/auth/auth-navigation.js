@@ -3,11 +3,11 @@ import { LoginScreen, SignupScreen } from './screens'
 
 const routeConfigs = {
   Login: LoginScreen,
-  Signup: SignupScreen
+  Signup: SignupScreen,
 }
 
 const stackNavigatorConfig = {
-  initialRouteName: 'Login'
+  initialRouteName: 'Login',
 }
 
 export default createStackNavigator(routeConfigs, stackNavigatorConfig)

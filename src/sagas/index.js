@@ -1,8 +1,8 @@
 import { all } from 'redux-saga/effects'
 
-import counter from './counter'
+import counter from '../components/counter/saga'
 
-import preload from '@components/splash-screen/saga'
+import preload from '../components/splash-screen/saga'
 
 export default function* rootSaga() {
   try {

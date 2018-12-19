@@ -2,8 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import store from './store'
 
-import { SplashScreen } from '@components'
-import AppNavigation from './navigation/app/app-navigation'
+import { SplashScreen } from './components'
 import RootNavigation from './navigation/root-navigation'
 
 export default class App extends React.Component {

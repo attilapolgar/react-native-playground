@@ -1,2 +1,4 @@
 import SplashScreen from './splash-screen'
-export { SplashScreen }
+import Counter from './counter'
+
+export { SplashScreen, Counter }
