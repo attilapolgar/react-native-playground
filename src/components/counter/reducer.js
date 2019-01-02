@@ -2,7 +2,7 @@ import { createActions, handleActions } from 'redux-actions'
 
 const INCREMENT_COUNTER = 'INCREMENT_COUNTER'
 const DECREMENT_COUNTER = 'DECREMENT_COUNTER'
-const INCREMENT_COUNTER_ASYNC = 'INCREMENT_COUNTER_ASYNC'
+export const INCREMENT_COUNTER_ASYNC = 'INCREMENT_COUNTER_ASYNC'
 
 const defaultState = {
   value: 0,
@@ -25,11 +25,19 @@ export default handleActions(
     [INCREMENT_COUNTER]: state => ({
       ...state,
       value: state.value + 1,
+      pending: false,
     }),
     [DECREMENT_COUNTER]: state => {
       return {
         ...state,
         value: state.value - 1,
+        pending: false,
+      }
+    },
+    [INCREMENT_COUNTER_ASYNC]: state => {
+      return {
+        ...state,
+        pending: true,
       }
     },
   },

@@ -1,14 +1,15 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
 import { Counter } from '../../../components'
+import { ScreenContainer } from '../../../components'
 
 class HomeScreen extends React.Component {
   render() {
     return (
-      <View>
+      <ScreenContainer>
         <Text>Home screen</Text>
         <Counter />
-      </View>
+      </ScreenContainer>
     )
   }
 }

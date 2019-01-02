@@ -1,7 +1,11 @@
 import { connect } from 'react-redux'
 
 import Component from './counter'
-import { incrementCounter, decrementCounter } from './reducer'
+import {
+  incrementCounter,
+  decrementCounter,
+  incrementCounterAsync,
+} from './reducer'
 
 const mapStateToProps = state => ({
   value: state.counter.value,
@@ -11,6 +15,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   increment: incrementCounter,
   decrement: decrementCounter,
+  incrementAsync: incrementCounterAsync,
 }
 
 const Counter = connect(

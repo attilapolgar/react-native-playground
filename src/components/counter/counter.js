@@ -1,9 +1,12 @@
 import React, { PureComponent } from 'react'
-import CounterView from './counter.view'
+import CounterView from './view/counter.view'
 
 class Counter extends PureComponent {
   handleIncrement = () => {
     this.props.increment()
+  }
+  handleIncrementAsync = () => {
+    this.props.incrementAsync()
   }
 
   handleDecrement = () => {
@@ -17,6 +20,7 @@ class Counter extends PureComponent {
       pending,
       onIncrement: this.handleIncrement,
       onDecrement: this.handleDecrement,
+      onIncrementAsync: this.handleIncrementAsync,
     }
     return <CounterView {...props} />
   }

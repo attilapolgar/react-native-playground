@@ -4,6 +4,10 @@
     "splash": {
       "backgroundColor": "#6e8785",
       "resizeMode": "cover"
-    }
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#334393"
+    },
   }
 }

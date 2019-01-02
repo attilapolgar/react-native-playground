@@ -4,7 +4,7 @@
   "private": true,
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "dev": "expo start -c",
+    "dev": "NODE_OPTIONS=--max_old_space_size=4096 expo start -c",
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
