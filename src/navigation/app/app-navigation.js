@@ -3,9 +3,13 @@ import { SettingsScreen, HomeScreen } from './screens'
 
 const Home = {
   screen: HomeScreen,
-  navigationOptions: {
+  defaultNavigationOptions: {
     title: 'Home',
     headerMode: 'screen',
+    headerTintColor: '#fff',
+    headerStyle: {
+      backgroundColor: '#000',
+    },
   },
 }
 
