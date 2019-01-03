@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from 'react-navigation'
-import { SettingsScreen, HomeScreen } from './screens'
+import { SettingsScreen, HomeScreen } from '../screens'
 
 const Home = {
   screen: HomeScreen,

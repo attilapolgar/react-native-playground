@@ -1,5 +1,5 @@
 import { createStackNavigator } from 'react-navigation'
-import { LoginScreen, SignupScreen } from './screens'
+import { LoginScreen, SignupScreen } from '../screens'
 
 const routeConfigs = {
   Login: LoginScreen,
