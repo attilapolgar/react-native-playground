@@ -1,7 +1,7 @@
-import SplashScreen from './splash-screen'
 import Counter from './counter'
-import ScreenContainer from './screen-container'
 import ErrorBoundary from './error-boundary'
 import OfflineNotice from './offline-notice'
+import ScreenContainer from './screen-container'
+import SplashScreen from './splash-screen'
 
-export { ScreenContainer, SplashScreen, Counter, ErrorBoundary, OfflineNotice }
+export { Counter, ErrorBoundary, OfflineNotice, ScreenContainer, SplashScreen }

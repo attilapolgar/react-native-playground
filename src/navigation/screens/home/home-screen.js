@@ -1,11 +1,13 @@
 import React from 'react'
-import { Counter, ScreenContainer } from '../../../components'
+import { Counter, ScreenContainer, ErrorBoundary } from '../../../components'
 
 class HomeScreen extends React.Component {
   render() {
     return (
       <ScreenContainer>
-        <Counter />
+        <ErrorBoundary>
+          <Counter />
+        </ErrorBoundary>
       </ScreenContainer>
     )
   }

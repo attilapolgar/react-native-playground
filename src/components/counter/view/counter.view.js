@@ -12,7 +12,7 @@ const CounterView = ({
   onIncrementAsync,
 }) => (
   <View style={styles.counter}>
-    <Text>Counter</Text>
+    <Text>Buggy counter: fails at 5</Text>
     <View style={styles.valueContainer}>
       {pending ? (
         <ActivityIndicator color={colors.brand} />
