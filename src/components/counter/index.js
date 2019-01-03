@@ -9,6 +9,7 @@ import {
 
 const mapStateToProps = state => ({
   value: state.counter.value,
+  theme: state.theme.theme,
   pending: state.counter.pending,
 })
 

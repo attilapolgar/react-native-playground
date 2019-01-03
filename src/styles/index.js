@@ -1,7 +1,11 @@
 export const colors = {
   white: '#fff',
-  grey: 'lightgrey',
-  brand: 'orange',
+  grey: '#AB9B96',
+  a: '#99938A',
+  brand: '#A63A50',
+  light: '#F0E7D8',
+  cotta: '#DB5461',
+  violet: '#593C8F',
 }
 
 export const sizes = {
@@ -12,5 +16,6 @@ export const sizes = {
 
 export const palette = {
   backgroundColor: colors.white,
-  componentBackground: colors.grey,
+  componentBackground: colors.light,
+  button: colors.cotta,
 }

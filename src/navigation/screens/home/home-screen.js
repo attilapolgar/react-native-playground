@@ -1,5 +1,10 @@
 import React from 'react'
-import { Counter, ScreenContainer, ErrorBoundary } from '../../../components'
+import {
+  Counter,
+  ScreenContainer,
+  ErrorBoundary,
+  ThemeSelector,
+} from '../../../components'
 
 class HomeScreen extends React.Component {
   render() {
@@ -8,6 +13,7 @@ class HomeScreen extends React.Component {
         <ErrorBoundary>
           <Counter />
         </ErrorBoundary>
+        <ThemeSelector />
       </ScreenContainer>
     )
   }
