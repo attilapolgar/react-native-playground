@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Provider } from 'react-redux'
 import store from './store'
 
-import { SplashScreen } from './components'
+import { SplashScreen, OfflineNotice } from './components'
 import RootNavigation from './navigation/root-navigation'
 
 export default class App extends React.Component {
@@ -15,11 +15,14 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        {this.state.isReady ? (
-          <RootNavigation />
-        ) : (
-          <SplashScreen onFinish={() => this.setState({ isReady: true })} />
-        )}
+        <Fragment>
+          {this.state.isReady ? (
+            <RootNavigation />
+          ) : (
+            <SplashScreen onFinish={() => this.setState({ isReady: true })} />
+          )}
+          <OfflineNotice />
+        </Fragment>
       </Provider>
     )
   }

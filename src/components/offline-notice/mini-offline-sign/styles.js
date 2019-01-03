@@ -1,12 +1,12 @@
 import { StyleSheet, Dimensions } from 'react-native'
 const { width } = Dimensions.get('window')
 
-const backgroundColor = '#b52424'
+const offlineBackgroundColor = '#b52424'
+const onlineBackgroundColor = 'green'
 const color = '#fff'
 
 export default StyleSheet.create({
-  offlineContainer: {
-    backgroundColor,
+  container: {
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
@@ -15,5 +15,11 @@ export default StyleSheet.create({
     position: 'absolute',
     bottom: 0,
   },
-  offlineText: { color },
+  text: { color },
+  offlineContainer: {
+    backgroundColor: offlineBackgroundColor,
+  },
+  onlineContainer: {
+    backgroundColor: onlineBackgroundColor,
+  },
 })
