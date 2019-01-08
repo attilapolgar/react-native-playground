@@ -1,13 +1,20 @@
 {
   "expo": {
+    "name": "react-native playground",
+    "description": "a sample application for trying new things",
+    "slug": "react-native-playground",
+    "privacy": "public",
+    "version": "0.0.0",
     "sdkVersion": "32.0.0",
+    "platforms": ["ios", "android"],
+    "orientation": "portrait",
+    "primaryColor": "#804C06",
     "splash": {
-      "backgroundColor": "#6e8785",
-      "resizeMode": "cover"
+      "backgroundColor": "#804C06"
     },
     "androidStatusBar": {
       "barStyle": "light-content",
-      "backgroundColor": "#334393"
-    },
+      "backgroundColor": "#804C06"
+    }
   }
 }

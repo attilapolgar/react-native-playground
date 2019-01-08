@@ -5,41 +5,35 @@ import styled, { ThemeProvider } from 'styled-components'
 
 import { number, bool, func, object } from 'prop-types'
 import { Button, ActivityIndicator } from 'react-native'
-import { colors, palette } from '../../../styles'
-
-const Padded = styled.View`
-  padding-top: 10;
-  padding-bottom: 10;
-  padding-left: 10;
-  padding-right: 10;
-`
+import { Padded, Text } from '../../ui'
 
 const Container = styled.View`
-  elevation: 10;
+  elevation: ${({ theme }) => theme.ELEVATION};
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
+  background-color: ${({ theme }) => theme.PRIMARY_BACKGROUND_LIGHT};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS};
 `
 
 const Header = styled.View`
-  background-color: ${props => props.theme.PRIMARY_COLOR};
+  background-color: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS};
 `
 
 const Body = styled.View``
 
 const Footer = styled.View`
   align-items: center;
-  background-color: ${props => props.theme.PRIMARY_COLOR};
-`
-
-const HeaderText = styled.Text`
-  font-size: ${props => props.theme.FONT_SIZE_EXTRA_LARGE};
-  color: ${props => props.theme.PRIMARY_FOREGROUND_COLOR};
+  background-color: ${props => props.theme.PRIMARY_BACKGROUND_COLOR};
+  border-bottom-left-radius: ${({ theme }) => theme.BORDER_RADIUS};
+  border-bottom-right-radius: ${({ theme }) => theme.BORDER_RADIUS};
 `
 
 const FooterText = styled.Text`
   font-size: ${props => props.theme.FONT_SIZE_SMALL};
-  color: ${props => props.theme.PRIMARY_FOREGROUND_COLOR};
+  color: ${props => props.theme.PRIMARY_TEXT_COLOR};
 `
 
 const CounterValueContainer = styled.View`
@@ -69,7 +63,7 @@ const CounterView = ({
     <Container>
       <Header>
         <Padded>
-          <HeaderText>Buggy counter: fails at 5</HeaderText>
+          <Text size="large">Buggy counter: fails at 5</Text>
         </Padded>
       </Header>
       <Body>
@@ -77,7 +71,10 @@ const CounterView = ({
           <CounterValueContainer>
             <Padded>
               {pending ? (
-                <ActivityIndicator color={colors.brand} />
+                <ActivityIndicator
+                  color={theme.SECONDARY_BACKGROUND_COLOR}
+                  size="large"
+                />
               ) : (
                 <CounterValueText>{value}</CounterValueText>
               )}
@@ -88,19 +85,19 @@ const CounterView = ({
               title="-"
               disabled={pending}
               onPress={onDecrement}
-              color={palette.button}
+              color={theme.SECONDARY_BACKGROUND_COLOR}
             />
             <Button
               disabled={pending}
               title="async+"
               onPress={onIncrementAsync}
-              color={palette.button}
+              color={theme.SECONDARY_BACKGROUND_COLOR}
             />
             <Button
               title="+"
               disabled={pending}
               onPress={onIncrement}
-              color={palette.button}
+              color={theme.SECONDARY_BACKGROUND_COLOR}
             />
           </CounterButtonContainer>
         </Padded>

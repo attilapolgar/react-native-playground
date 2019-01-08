@@ -1,4 +1,4 @@
-import { createBottomTabNavigator } from 'react-navigation'
+import { createDrawerNavigator } from 'react-navigation'
 import { SettingsScreen, HomeScreen } from '../screens'
 
 const Home = {
@@ -24,4 +24,4 @@ const tabNavigatorConfig = {
   initialRouteName: 'Home',
 }
 
-export default createBottomTabNavigator(routeConfigs, tabNavigatorConfig)
+export default createDrawerNavigator(routeConfigs, tabNavigatorConfig)

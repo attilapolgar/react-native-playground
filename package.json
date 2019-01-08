@@ -1,8 +1,8 @@
 {
-  "name": "react-native-boilerplate",
+  "name": "react-native-playground",
   "version": "0.0.1",
   "private": true,
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": "./node_modules/expo/AppEntry.js",
   "scripts": {
     "dev": "NODE_OPTIONS=--max_old_space_size=4096 expo start -c",
     "start": "react-native-scripts start",

@@ -5,7 +5,7 @@ import * as theme from './theme'
 const SWITCH_THEME = 'SWITCH_THEME'
 
 const defaultState = {
-  theme: { ...theme.base, ...theme.lightTheme },
+  theme: { ...theme.base, ...theme.darkTheme },
 }
 
 export const { switchTheme } = createActions({}, SWITCH_THEME)

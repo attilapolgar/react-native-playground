@@ -1,17 +1,24 @@
 const colorOptions = {
   orange: {
-    PRIMARY_COLOR_FAINT: '#FFF3E0',
-    PRIMARY_COLOR_LIGHT: '#FFB74D',
-    PRIMARY_COLOR: '#FF9800',
-    PRIMARY_COLOR_BOLD: '#EF6C00',
-    PRIMARY_FOREGROUND_COLOR: '#ffffff',
+    FAINT: '#FFF5E7',
+    LIGHT: '#DEBA89',
+    COLOR: '#AF7C37',
+    DARK: '#804C06',
+    DARKEST: '#4E2D00',
   },
   green: {
-    PRIMARY_COLOR_FAINT: '#E8F5E9',
-    PRIMARY_COLOR_LIGHT: '#81C784',
-    PRIMARY_COLOR: '#4CAF50',
-    PRIMARY_COLOR_BOLD: '#2E7D32',
-    PRIMARY_FOREGROUND_COLOR: '#ffffff',
+    FAINT: '#B3C6B8',
+    LIGHT: '#66A677',
+    COLOR: '#298341',
+    COLOR_DARK: '#04601C',
+    DARKEST: '#003A0F',
+  },
+  yellow: {
+    FAINT: '#FFFB72',
+    LIGHT: '#EEE946',
+    COLOR: '#DFDA18',
+    COLOR_DARK: '#B0AC0A',
+    DARKEST: '#898600',
   },
 }
 
@@ -26,34 +33,37 @@ export const base = {
   FONT_WEIGHT_LIGHT: '200',
   FONT_WEIGHT_MEDIUM: '500',
   FONT_WEIGHT_BOLD: '700',
+
+  ELEVATION: 0,
+  BORDER_RADIUS: 0,
 }
 
-export const darkTheme = {
-  PRIMARY_BACKGROUND_COLOR: '#3d3d3d',
-  PRIMARY_BACKGROUND_COLOR_LIGHT: '#797979',
+const fancy = {
+  ...base,
+  ELEVATION: 15,
+  BORDER_RADIUS: 10,
+}
 
-  SECONDARY_BACKGROUND_COLOR: '#ffffff',
-  SECONDARY_BACKGROUND_COLOR_LIGHT: '#f7f7f7',
+const makeTheme = (primaryColor, secondaryColor, sizes) => ({
+  PRIMARY_BACKGROUND_COLOR: primaryColor.LIGHT,
+  PRIMARY_BACKGROUND_LIGHT: primaryColor.FAINT,
+
+  SECONDARY_BACKGROUND_COLOR: secondaryColor.LIGHT,
+  SECONDARY_BACKGROUND_LIGHT: secondaryColor.FAINT,
 
   PRIMARY_TEXT_COLOR: '#ffffff',
-  PRIMARY_TEXT_COLOR_LIGHT: '#f7f7f7',
-  SECONDARY_TEXT_COLOR: '#3d3d3d',
-  PRIMARY_TEXT_BACKGROUND_COLOR: '#3d3d3d',
-  SECONDARY_TEXT_BACKGROUND_COLOR: '#ffffff',
-  ...colorOptions.green,
-}
+  PRIMARY_TEXT_LIGHT: '#f7f7f7',
+  ...sizes,
+})
 
-export const lightTheme = {
-  PRIMARY_BACKGROUND_COLOR: '#F0E7D8',
-  PRIMARY_BACKGROUND_COLOR_LIGHT: '#f7f7f7',
+export const darkTheme = makeTheme(
+  colorOptions.green,
+  colorOptions.orange,
+  base
+)
 
-  SECONDARY_BACKGROUND_COLOR: '#3d3d3d',
-  SECONDARY_BACKGROUND_COLOR_LIGHT: '#797979',
-
-  PRIMARY_TEXT_COLOR: '#3d3d3d',
-  PRIMARY_TEXT_COLOR_LIGHT: '#797979',
-  SECONDARY_TEXT_COLOR: '#ffffff',
-  PRIMARY_TEXT_BACKGROUND_COLOR: '#ffffff',
-  SECONDARY_TEXT_BACKGROUND_COLOR: '#3d3d3d',
-  ...colorOptions.orange,
-}
+export const lightTheme = makeTheme(
+  colorOptions.orange,
+  colorOptions.yellow,
+  fancy
+)
