@@ -1,19 +1,16 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
+    "airbnb",
     "plugin:prettier/recommended",
     "plugin:react-redux/recommended",
-    "plugin:redux-saga/recommended",
-    "plugin:sonarjs/recommended"
+    "plugin:redux-saga/recommended"
   ],
-  "plugins": ["react", "react-native", "react-redux", "redux-saga", "sonarjs"],
+  "plugins": ["react-native", "react-redux", "redux-saga"],
   "parser": "babel-eslint",
   "env": {
     "react-native/react-native": true
   },
   "rules": {
-    "react/prop-types": 2,
     "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
     "react-native/no-inline-styles": 2,
@@ -27,7 +24,8 @@
       }
     ],
     "no-console": "off",
-    "no-useless-escape": "warn"
+    "react/jsx-filename-extension": [0],
+    "react/forbid-prop-types": [0]
   },
   "parserOptions": {
     "ecmaFeatures": {

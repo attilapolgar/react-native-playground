@@ -3,7 +3,7 @@ import { object } from 'prop-types'
 import { Text } from 'react-native'
 
 const propTypes = {
-  children: object,
+  children: object.isRequired,
 }
 
 class ErrorBoundary extends PureComponent {
@@ -20,7 +20,7 @@ class ErrorBoundary extends PureComponent {
   render() {
     const { hasError } = this.state
     const { children } = this.props
-    return hasError ? <Text>⚠️ Something went wrong! ⚠️</Text> : children
+    return hasError ? <Text> Something went wrong!</Text> : children
   }
 }
 export default ErrorBoundary

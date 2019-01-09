@@ -27,19 +27,15 @@ export default handleActions(
       value: state.value + 1,
       pending: false,
     }),
-    [DECREMENT_COUNTER]: state => {
-      return {
-        ...state,
-        value: state.value - 1,
-        pending: false,
-      }
-    },
-    [INCREMENT_COUNTER_ASYNC]: state => {
-      return {
-        ...state,
-        pending: true,
-      }
-    },
+    [DECREMENT_COUNTER]: state => ({
+      ...state,
+      value: state.value - 1,
+      pending: false,
+    }),
+    [INCREMENT_COUNTER_ASYNC]: state => ({
+      ...state,
+      pending: true,
+    }),
   },
   defaultState
 )

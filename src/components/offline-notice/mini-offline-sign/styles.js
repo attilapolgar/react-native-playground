@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native'
+
 const { width } = Dimensions.get('window')
 
 const offlineBackgroundColor = '#b52424'

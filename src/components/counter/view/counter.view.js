@@ -121,10 +121,7 @@ CounterView.propTypes = {
 }
 
 CounterView.defaultProps = {
-  value: 0,
   pending: false,
-  onIncrement: () => null,
-  onDecrement: () => null,
   onIncrementAsync: () => null,
 }
 

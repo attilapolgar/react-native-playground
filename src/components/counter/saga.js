@@ -1,8 +1,7 @@
 import { delay } from 'redux-saga'
 import { put, takeLatest } from 'redux-saga/effects'
 
-import { INCREMENT_COUNTER_ASYNC } from './reducer'
-import { incrementCounter } from './reducer'
+import { INCREMENT_COUNTER_ASYNC, incrementCounter } from './reducer'
 
 function* incrementAsync() {
   try {

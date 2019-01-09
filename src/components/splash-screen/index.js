@@ -1,21 +1,26 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { AppLoading } from 'expo'
 import PropTypes from 'prop-types'
 import { View, Text } from 'react-native'
 import { preloadAssetsRequested } from './actions'
+import styles from './styles'
 
 class SplashScreen extends Component {
   componentDidMount = () => {
-    this.props.preloadAssets()
+    const { preloadAssets } = this.props
+    preloadAssets()
   }
+
   componentDidUpdate = () => {
-    this.props.preloadState.success && this.props.onFinish()
+    const { preloadState, onFinish } = this.props
+    if (preloadState.success) {
+      onFinish()
+    }
   }
 
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={styles.container}>
         <Text>loading</Text>
       </View>
     )

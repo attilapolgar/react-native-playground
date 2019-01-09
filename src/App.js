@@ -12,11 +12,13 @@ export default class App extends React.Component {
       isReady: false,
     }
   }
+
   render() {
+    const { isReady } = this.state
     return (
       <Provider store={store}>
         <Fragment>
-          {this.state.isReady ? (
+          {isReady ? (
             <RootNavigation />
           ) : (
             <SplashScreen onFinish={() => this.setState({ isReady: true })} />
