@@ -11,10 +11,12 @@ const propTypes = {
 
 const defaultProps = {
   renderWhenOnline: false,
+  render: null,
 }
 
 class OfflineNotice extends PureComponent {
   static propTypes = propTypes
+
   static defaultProps = defaultProps
 
   state = {

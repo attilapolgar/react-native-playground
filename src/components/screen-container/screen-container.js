@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react'
 import { oneOfType, arrayOf, object } from 'prop-types'
 import { SafeAreaView } from 'react-native'
-import { ErrorBoundary } from '../'
+import { ErrorBoundary } from '..'
 
 import styles from './styles'
 
 const propTypes = {
-  children: oneOfType([object, arrayOf(object)]),
+  children: oneOfType([object, arrayOf(object)]).isRequired,
 }
 
 class ScreenContainer extends PureComponent {

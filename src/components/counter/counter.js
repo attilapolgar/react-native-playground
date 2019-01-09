@@ -3,24 +3,29 @@ import { number, bool, func } from 'prop-types'
 import CounterView from './view/counter.view'
 
 const propTypes = {
-  value: number,
-  pending: bool,
-  increment: func,
-  incrementAsync: func,
-  decrement: func,
+  value: number.isRequired,
+  pending: bool.isRequired,
+  increment: func.isRequired,
+  incrementAsync: func.isRequired,
+  decrement: func.isRequired,
 }
 
 class Counter extends PureComponent {
   static propTypes = propTypes
+
   handleIncrement = () => {
-    this.props.increment()
+    const { increment } = this.props
+    increment()
   }
+
   handleIncrementAsync = () => {
-    this.props.incrementAsync()
+    const { incrementAsync } = this.props
+    incrementAsync()
   }
 
   handleDecrement = () => {
-    this.props.decrement()
+    const { decrement } = this.props
+    decrement()
   }
 
   render() {

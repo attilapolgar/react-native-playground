@@ -11,7 +11,8 @@ class LoginScreen extends React.Component {
   static propTypes = propTypes
 
   signIn = () => {
-    this.props.navigation.navigate('App')
+    const { navigation } = this.props
+    navigation.navigate('App')
   }
 
   render() {

@@ -3,7 +3,7 @@ import ThemeSelector from './theme-selector'
 import { switchTheme } from './reducer'
 
 const mapDispatchToProps = {
-  switchTheme: switchTheme,
+  switchTheme,
 }
 
 export default connect(
